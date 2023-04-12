@@ -1,0 +1,114 @@
+\documentclass{standalone}
+
+\usepackage{siunitx}
+\usepackage{tikz} 
+\usepackage{circuitikz} 
+\usepackage{steinmetz}
+
+
+\begin{document}
+	
+	\begin{circuitikz}[american,]
+		
+		\draw (-1.5, -0.5) to [short] (-1.0, -0.5);
+		\draw [-latex] (-1.25, -0.5) -- (-1.25, 0.75);
+		\node at (-1.75, 0.125) {\Large{y}};
+		
+		\draw (0.0, 0.0) to [short] (12.0, 0.0);
+		\draw (0.0, 0.0) to [short] (0.0, -6.0);
+		\draw (12.0, 0.0) to [short] (12.0, -6.0);
+		\draw (0.0, -6.0) to [short] (2.0, -6.0);
+		\draw (2.0, -6.0) to [short] (2.0, -2.0);
+		\draw (2.0, -2.0) to [short] (4.25, -2.0);
+		\draw (4.25, -2.0) to [short] (4.25, -6.0);
+		\draw (4.25, -6.0) to [short] (7.75, -6.0);
+		\draw (7.75, -6.0) to [short] (7.75, -2.0);
+		\draw (7.75, -2.0) to [short] (10.0, -2.0);
+		\draw (10.0, -2.0) to [short] (10.0, -6.0);
+		\draw (10.0, -6.0) to [short] (12.0, -6.0); 
+		
+		\draw (0.0, 0.0) to [short] (0.75, 0.75);
+		\draw (0.75, 0.75) to [short] (12.75, 0.75);
+		\draw (12.75, 0.75) to [short] (12.0, 0.0);
+		\draw (12.75, 0.75) to [short] (12.75, -5.25);
+		\draw (12.75, -5.25) to [short] (12.0, -6.0);
+		\draw (2.0, -6.0) to [short] (2.75, -5.25) to [short] (2.75, -2);
+		\draw (7.75, -6.0) to [short] (8.5, -5.25) to [short] (8.5, -2);
+		
+		\draw (0.0, -7.0) to [short] (0.0, -9.0);
+		\draw (0.0, -9.0) to [short] (12.0, -9.0);
+		\draw (12.0, -9.0) to [short] (12.0, -7.0);
+		\draw (12.0, -7.0) to [short] (0.0, -7.0);
+		\draw (0.0, -7.0) to [short] (0.75, -6.25) to [short] (12.75, -6.25) to [short] (12.75, -8.25) to [short] (12.0, -9.0);
+		\draw (12.0, -7.0) to [short] (12.75, -6.25);
+		\node at (6.0, -8.0) {\huge{$m$}};
+		
+		\draw (-2.0, -3.5) to [short, o-] (8.0, -3.5) to [short] (8.75, -2.75) to [short] (8.575, -2.75);
+		\draw (4.175, -3.825) to [short] (4., -4.0) to [short] (8.0, -4.0) to [short] (8.75, -3.25) to [short] (8.575, -3.25);
+		\draw (4.175, -4.325) to [short] (4., -4.5) to [short] (8.0, -4.5) to [short] (8.75, -3.75) to [short] (8.575, -3.75);
+		\draw (4.175, -4.825) to [short] (4., -5.0) to [short] (8.0, -5.0) to [short] (8.75, -4.25) to [short] (8.575, -4.25);
+		
+		\node at (-1.25, -3.) {\huge{$i$}};
+		\draw [-latex, line width=1pt] (-1.75, -3.5) -- (-0.75, -3.5);
+		\draw (-2.0, -5.25) to [short, o-] (4.175, -5.25);
+		
+		\draw (0.75, 1.0) to [short] (0.75, 2.0);
+		\draw (12.75, 1.0) to [short] (12.75, 2.0);
+		\draw [latex-latex] (0.75, 1.5) -- (12.75, 1.5);
+		\node[rectangle,fill=white, text opacity=1,fill opacity=1.] at (6.75, 1.5) {\Large{240 mm}};
+		
+		\draw [-latex] (13.5, -4.25) -- (13.5, -5.25);
+		\draw (13., -5.25) to [short] (14., -5.25);
+		\draw (13., -6.25) to [short] (14., -6.25);
+		\draw [-latex] (13.5, -7.25) -- (13.5, -6.25);
+		\draw (13.5, -5.75) node{\Large{h}};
+		
+		\draw (-0.25, -7.0) to [short] (-1.25, -7.0);
+		\draw (-0.25, -9.0) to [short] (-1.25, -9.0);
+		\draw [latex-latex] (-0.75, -7.0) -- (-0.75, -9.0);
+		\node[rectangle,fill=white, text opacity=1,fill opacity=1.] at (-1.0, -8.0) {\Large{40 mm}};
+		
+		\draw (12.0, -9.25) to [short] (12.0, -10.5);
+		\draw (10.0, -9.25) to [short] (10.0, -10.25);
+		\draw [latex-latex] (10.0, -9.75) -- (12.0, -9.75);
+		\node[rectangle,fill=white, text opacity=1,fill opacity=1.] at (11.0, -9.75) {40 mm};
+		
+		\draw (12.75, -8.5) to [short] (12.75, -10.);
+		\draw [latex-latex] (12.0, -10.25) -- (12.75, -9.5);
+		\node[rectangle,fill=white, text opacity=1,fill opacity=1.] at (13.0, -10.25) {40 mm};
+		
+		
+		\draw (7.75, -9.25) to [short] (7.75, -10.25);
+		\draw (4.25, -9.25) to [short] (4.25, -10.25);
+		\draw [latex-latex] (4.25, -9.75) -- (7.75, -9.75);
+		\node[rectangle,fill=white, text opacity=1,fill opacity=1.] at (6.0, -9.75) {\Large{80 mm}};
+		
+		\draw (0.0, -9.25) to [short] (0.0, -10.25);
+		\draw (2.0, -9.25) to [short] (2.0, -10.25);
+		\draw [latex-latex] (0.0, -9.75) -- (2.0, -9.75);
+		\node[rectangle,fill=white, text opacity=1,fill opacity=1.] at (1.0, -9.75) {40 mm};
+		
+		\draw [line width=1pt] (3.125, -9.0) to [short] (3.125, -11.5);
+		\draw [line width=1pt] (8.875, -9.0) to [short] (8.875, -11.5);
+
+%		\draw [line width=1pt] (2.25, -11.75) to [short] (2.25, -9.0);
+		
+		\draw (2.0, -12.0) to [short] (8.75, -12.0);
+		\draw (2.0, -12.0) to [short] (2.75, -11.25);
+		\draw (2.75, -11.25) to [short] (9.5, -11.25);
+		\draw (8.75, -12.0) to [short] (9.5, -11.25);
+		
+		\draw (2.0, -12.0) to [short] (2.0, -13.0);
+		\draw (2.0, -13.0) to [short] (8.75, -13.0);
+		\draw (8.75, -13.0) to [short] (8.75, -12.0);
+		\draw (8.75, -13.0) to [short] (9.5, -12.25);
+		\draw (9.5, -12.25) to [short] (9.5, -11.25);
+		
+		\node at (5.375, -12.5) {\huge{$m_\ell$}};
+		
+		%		\draw (-3.75, 0.25) to [/tikz/circuitikz/bipoles/length=0.45cm, polar capacitor] (-3., 0.25);
+		
+		
+	\end{circuitikz}
+	
+\end{document}

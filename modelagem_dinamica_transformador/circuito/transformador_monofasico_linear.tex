@@ -1,0 +1,89 @@
+\documentclass{standalone}
+
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+ % \title{Drawing}
+
+
+
+\begin{document}
+
+
+
+\begin{circuitikz}[american]
+	
+	\draw (-1.0, 0.0) to [vsourcesin, l=$v_f(t)$] (-1.0, 1.5);
+	\draw (-1.0, 1.5) to [cute inductor, l=$L_f$] (-1.0, 3.0);
+	\draw [-latex] (-1.15, 3.25) --(-0.15, 3.25);
+	\draw (-1.2, 3.5) node[]{$i_f(t) \equiv i_P(t)$};
+	\draw [latex-latex] (-0.15, 0.25) -- (-0.15, 2.75);
+	\draw (0.35, 1.5) node[]{$v_P(t)$};
+	
+	\draw (-1.0, 3.0) to [/tikz/circuitikz/bipoles/length=0.95cm, resistor, l=$r_P$] (2.0, 3.0);
+	\draw (2.0, 3.0) to [cute inductor, l=$L_{lP}$] (3.0, 3.0);
+	\draw (3.0, 3.0) to [short, -*] (4.0, 3.0) to [short] (5.0, 3.0);
+	
+	\draw (4.0, 3.0) to [cute inductor, -*, l=$L_m$] (4.0, 0.0);
+	
+	\draw (5.0, 3.0) to [cute inductor, l=$L'_{lS}$] (6.0, 3.0);
+	\draw (6.0, 3.0) to [/tikz/circuitikz/bipoles/length=0.95cm, resistor, l=$r'_S$] (8.0, 3.0);
+	
+	\draw (8.0, 0.0) to [short, -*] (-1.0, 0.0);
+	\draw (-1.0, 0.0) node[/tikz/circuitikz/bipoles/length=0.75cm, ground]{}; 
+	
+	\draw (8.0, 3.0) to [inductor] (8.0, 0.0);
+	\draw [line width = 0.25mm] (8.35, 2.5) to [short] (8.35, 0.5);
+	\draw [line width = 0.25mm] (8.65, 2.5) to [short] (8.65, 0.5);
+	\draw (9.0, 0.0) to [inductor] (9.0, 3.0);
+	
+	\draw (9.0, 0.0) to [short, -*] (10.0, 0.0);
+	\draw (9.0, 3.0) to [short, -*] (10.0, 3.0);
+	
+	\draw [latex-latex] (10.0, 0.25) -- (10.0, 2.75);
+	\draw (10.5, 1.5) node[]{$v_S(t)$};
+	\draw [-latex] (10.0, 3.25) -- (9., 3.25);
+	\draw (9.5, 3.5) node[]{$i_S(t)$};
+
+	% \draw (-0.575, 0.425) to [short] (0.25, 0.425);
+	
+	% \draw [line width = 0.75mm] (0.25, -0.25) to [short] (0.25, 1.10);
+	% \draw (0.25, 1.35) node {\textbf{1}};
+	
+	% \draw (0.25, 0.425) to [short] (2.25, 0.425);
+	% \draw [line width = 0.75mm] (2.25, -0.25) to [short] (2.25, 1.10);
+	% \draw (2.25, 1.35) node {\textbf{2}};
+	
+	% \draw (2.25, 0.425) to [short] (5.25, 0.425);
+	% \draw [line width = 0.75mm] (5.25, -0.25) to [short] (5.25, 1.10);
+	% \draw (5.25, 1.35) node {\textbf{3}};
+	% \draw (5.25, 0.425) to [short] (5.75, 0.425);
+	% \draw [-latex] (5.75, 0.425) -- (5.75, -0.5) node [right] {$P_{L_3} + jQ_{L_3}$};
+	
+	% \draw (2.25, 0.0875) to [short] (2.925, 0.0875);
+	% \draw (2.925, 0.0875) to [short] (2.925, -1.);
+	% \draw [line width = 0.75mm] (2.25, -1.) to [short] (3.6, -1.);
+	% \draw (3.85, -1.) node {\textbf{4}};
+	
+	% \draw (2.5875, -2.25) to [/tikz/circuitikz/bipoles/length=0.95cm, variable cute inductor] (2.5875, -1.);
+	% \draw (2.5875, -2.25) -- (2.5875, -2.25) node[/tikz/circuitikz/bipoles/length=0.75cm, ground]{}; 
+	
+	% \draw (3.2625, -2.25) to [/tikz/circuitikz/bipoles/length=0.75cm, polar capacitor] (3.2625, -1.);
+	% \draw (3.2625, -2.25) -- (3.2625, -2.25) node[/tikz/circuitikz/bipoles/length=0.75cm, ground]{}; 
+	
+%	0.0875
+  
+%  (0.5, 4) to [short, i=${I_d(s)}$] (-1, 4)
+%  (0.5, 4) to [R, l=$r_s$] (2, 4)
+%  to [cvsource, l=$w_b\Lambda_q$] (6, 4)
+%  (6, 4) to [vsource, l=$L_{d}\cdot I_d(0^+)$] (6,2)
+%  to [L, -, l=$sL_{d}(s)$] (6, 0)
+%  to [short, -] (-1, 0)
+
+
+\end{circuitikz}
+
+
+
+\end{document}

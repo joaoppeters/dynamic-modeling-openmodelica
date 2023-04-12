@@ -1,0 +1,50 @@
+\documentclass{standalone}
+
+\usepackage{siunitx}
+\usepackage{tikz} 
+\usepackage{circuitikz} 
+\usepackage{steinmetz}
+
+
+\begin{document}
+	
+	\begin{circuitikz}[american,]
+		
+		\draw (0.0, 0.0) circle(1.);
+		\node at (0., 0.25) {Sistema};
+		\node at (0., -0.25) {El\'{e}trico};
+		\draw [-latex] (-1.75, 0.0) -- (-1.0, 0.0);
+		\draw [-latex] (0.0, 1.0) -- (0.0, 1.75);
+		\draw [-latex] (0.0, -1.0) -- (0.0, -1.75);
+		\node at (-1.7, 0.25) {$W_E$};
+		\node at (-0.5, 1.7) {$W_{eL}$};
+		\node at (-0.5, -1.7) {$W_{eS}$};
+		\node at (1.875, 0.25) {$W_e$};
+		
+		\draw [-latex] (1.0, 0.0) -- (2.75, 0.0);
+		\draw (3.75, 0.0) circle(1.);
+		\node at (3.75, 0.25) {Sistema};
+		\node at (3.75, -0.25) {Magn\'{e}tico};
+		\draw [-latex] (3.75, 1.0) -- (3.75, 1.75);
+		\draw [-latex] (3.75, -1.0) -- (3.75, -1.75);
+		\node at (3.75, 2.0) {$W_{fL}$};
+		\node at (3.75, -2.0) {$W_{fS}$};
+		
+		\draw [latex-] (4.75, 0.0) -- (6.5, 0.0);
+		\draw (7.5, 0.0) circle(1.);
+		\node at (7.5, 0.25) {Sistema};
+		\node at (7.5, -0.25) {Mec\^{a}nico};
+		\draw [-latex] (9.25, 0.0) -- (8.5, 0.0);
+		\draw [-latex] (7.5, 1.0) -- (7.5, 1.75);
+		\draw [-latex] (7.5, -1.0) -- (7.5, -1.75);
+		\node at (9.2, 0.25) {$W_M$};
+		\node at (8.0, 1.7) {$W_{mL}$};
+		\node at (8.0, -1.7) {$W_{mS}$};
+		\node at (5.625, 0.25) {$W_m$};
+		
+		%		\draw (-3.75, 0.25) to [/tikz/circuitikz/bipoles/length=0.45cm, polar capacitor] (-3., 0.25);
+		
+		
+	\end{circuitikz}
+	
+\end{document}

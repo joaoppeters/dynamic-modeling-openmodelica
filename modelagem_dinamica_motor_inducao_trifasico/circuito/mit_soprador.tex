@@ -1,0 +1,75 @@
+\documentclass{standalone}
+
+\usepackage{siunitx}
+\usepackage{tikz} 
+\usepackage{circuitikz} 
+\usepackage{steinmetz}
+
+
+\begin{document}
+	
+	\begin{circuitikz}[american,]
+		
+		\node at (5.0, 4.) {\huge{\textbf{MIT Gaiola de Esquilo}}};
+		\node at (15., 4.) {\huge{\textbf{Soprador}}};
+		
+		\draw (0.5, -2.5) to [short] (0.5, 2.5);
+		\draw (0.5, 2.5) arc (180:90:0.5);
+		\draw (0.5, -2.5) arc (180:270:0.5);
+		
+		\draw (1.0, 3.0) to [short] (2.0, 3.0) to [short] (2.0, -3.0) to [short] (1.0, -3.0);
+		
+		\draw (2.0, 2.5) to [short] (8.0, 2.5);
+		\draw (2.0, -2.5) to [short] (8.0, -2.5);
+		
+		\draw (2.75, 1.75) to [short] (7.25, 1.75);
+		\draw (2.75, 1.75) arc (90:270:0.25);
+		\draw (2.75, 1.25) to [short] (7.25, 1.25);
+		\draw (7.25, 1.25) arc (270:450:0.25);
+		
+		\draw (2.75, 0.25) to [short] (7.25, 0.25);
+		\draw (2.75, 0.25) arc (90:270:0.25);
+		\draw (2.75, -0.25) to [short] (7.25, -0.25);
+		\draw (7.25, -0.25) arc (270:450:0.25);
+		
+		\draw (2.75, -1.25) to [short] (7.25, -1.25);
+		\draw (2.75, -1.25) arc (90:270:0.25);
+		\draw (2.75, -1.75) to [short] (7.25, -1.75);
+		\draw (7.25, -1.75) arc (270:450:0.25);
+		
+		\draw (9.5, -3.0) to [short] (8.0, -3.0) to [short] (8.0, 3.0) to [short] (9.5, 3.0);
+		\draw (10.0, 2.5) arc (0:90:0.5);
+		\draw (10.0, -2.5) arc (0:-90:0.5);
+		\draw (10.0, -2.5) to [short] (10.0, 2.5);
+		
+		\draw (10.0, 1.) to [short] (10.5, 1.);
+		\draw (10.0, -1.) to [short] (10.5, -1.);
+		\draw (10.5, 1.) arc (90:-0:0.1);
+		\draw (10.5, -1.) arc (270:360:0.1);
+		\draw (10.6, 0.9) to [short] (10.6, -0.9);
+		
+		\draw (10.6, 0.25) to [short] (13, 0.25);
+		\draw (10.6, -0.25) to [short] (13, -0.25);
+		
+		\draw (3.0, -2.5) to [short] (3.0, -3.5);
+		\draw (3.75, -2.5) to [short] (3.75, -3.5);
+		
+		\draw (6.25, -2.5) to [short] (6.25, -3.5);
+		\draw (7.0, -2.5) to [short] (7.0, -3.5);
+		
+		\draw (2., -3.5) arc (90:180:0.5);
+		\draw (2., -3.5) to [short] (8.25, -3.5);
+		\draw (8.25, -3.5) arc (90:-0:0.5);
+		\draw (1.5, -4.0) to [short] (8.75, -4.0);
+		
+		
+		\draw (16.5, 3.5) arc (90:360:3.5);
+		\draw (16.5, 3.5) arc (90:60:3.5);
+		
+		\draw (18.25, 1.) to [short] (18.25, 5.);
+		\draw (18.25, 1.) arc (0:-135:1.25);
+		\draw (20.0, 0.) to [short] (20.0, 5.);
+		
+	\end{circuitikz}
+	
+\end{document}

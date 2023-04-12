@@ -1,0 +1,35 @@
+\documentclass{standalone}
+
+\usepackage{siunitx}
+\usepackage{tikz} 
+\usepackage{circuitikz} 
+\usepackage{steinmetz}
+\usepackage{mathrsfs}
+
+\begin{document}
+	
+	\begin{circuitikz}[american,]
+		
+		\draw (2.0, 0.0) to [vsource, l_=$\mathscr{F}_{\text{mm}}$] (2.0, 2.0);
+		\draw (2.0, 0.0) to [resistor, l=$\mathscr{R}_\text{gm}$] (2.0, -2.0);
+		
+		\draw (-1.0, 2.0) to [short] (5.0, 2.0) to [resistor, l=$\mathscr{R}_\text{gl}$] (5.0, -2.0) to [short] (-1.0, -2.0) to [resistor, l=$\mathscr{R}_\text{gl}$] (-1.0, 2.0);
+		
+		\draw [-latex] (1.5, -0.5) -- (1.5, 1.5);
+		\node at (1.1, 0.5) {$\Phi_\textbf{M}$};
+		
+		\draw [-latex] (2.5, 2.2) -- (4.5, 2.2);
+		\node at (3.5, 2.4) {$\Phi_\text{L}$};
+		
+		\draw [-latex] (1.5, 2.2) -- (-0.5, 2.2);
+		\node at (0.5, 2.4) {$\Phi_\text{L}$};
+		
+		
+		
+		
+		%		\draw (-3.75, 0.25) to [/tikz/circuitikz/bipoles/length=0.45cm, polar capacitor] (-3., 0.25);
+		
+		
+	\end{circuitikz}
+	
+\end{document}
