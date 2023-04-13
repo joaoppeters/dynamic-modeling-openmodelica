@@ -1,6 +1,6 @@
 # Dynamic Modeling of Electric Power Equipments via OpenModelica
 
-This repo contains the dynamic modeling and simulation results of three electric devices, as well as a dynamic modeling and simulation regarding electromechanical energy conversion.
+This repo contains the dynamic modeling and simulation results of three electric devices, as well as a dynamic modeling and simulation regarding fundamentals of electromechanical energy conversion.
 
 The OpenModelica software was employed to dynamically model and simulate:
 
