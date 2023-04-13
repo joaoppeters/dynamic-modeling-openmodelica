@@ -13,4 +13,4 @@ The OpenModelica software was employed to dynamically model and simulate:
 [4) Synchronous Machines](dynamic_modeling_synchronous_machines/)
 
 ---
-Main reference: [Paul Krause book](https://www.amazon.com/Analysis-Electric-Machinery-Drive-Systems-dp-111802429X/dp/111802429X/ref=dp_ob_title_bk)
+Main reference: [Paul Krause's book](https://www.amazon.com/Analysis-Electric-Machinery-Drive-Systems-dp-111802429X/dp/111802429X/ref=dp_ob_title_bk)
